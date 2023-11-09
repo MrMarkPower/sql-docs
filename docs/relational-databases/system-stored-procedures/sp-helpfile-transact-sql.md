@@ -42,7 +42,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Logical file name.|  
 |**fileid**|**smallint**|Numeric identifier of the file. Is not returned if *name* is specified*.*|  
-|**filename**|**nchar(260)**|Physical file name.|  
+|**filename**|**nchar(260)**|Physical file name. If the database is hosted by an availability group readable secondary replica, physical_name indicates the file location of the primary replica database.|
 |**filegroup**|**sysname**|Filegroup in which the file belongs.<br /><br /> NULL = File is a log file. This is never a part of a filegroup.|  
 |**size**|**nvarchar(15)**|File size in kilobytes.|  
 |**maxsize**|**nvarchar(15)**|Maximum size to which the file can grow. A value of UNLIMITED in this field indicates that the file grows until the disk is full.|  
